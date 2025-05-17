@@ -26,16 +26,15 @@ header {
   width: 100vw;
   position: fixed;
 }
-header h1 {
+header p {
   text-shadow: #fff7f783 1px 2px 8px;
-  color: #ffffffc2;
+  color: #f5f4f4d2;
   padding: 0px;
-  margin: 0px;
-  top: 10px;
-  padding-top: 8px;
-  font-size: 2.5em;
+  margin: 10px;
+  top: 0px;
+  font-size: 0.6em;
   position: relative;
-  text-align: left;
+  left: 60vh;
 }
 
 nav ul {
@@ -45,7 +44,7 @@ nav ul {
   margin-top: 0; /* Garante que não há margem extra */
   margin-bottom: 0;
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,6 +52,7 @@ nav ul {
 }
 nav ul li {
   display: flex;
+  margin: 0px;
   margin-left: 0;
   float: none;
 }
@@ -109,7 +109,7 @@ main section h2 {
 .planos-cards {
   display: flex;
   flex-wrap: 1 1 260px;
-  gap: 40px;
+  gap: 100px;
   justify-content: center;
   margin: 40px 0;
 }
