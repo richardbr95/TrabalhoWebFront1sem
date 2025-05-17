@@ -1,0 +1,273 @@
+/* Reset básico de todos os componentes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Corpo do nosso site */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #3d2e2e;
+  padding: 0;
+  margin-top: 20vh;
+  overflow-x: hidden;  /* Esconde a barra de rolagem em X */
+  font-family: monospace, Courier, monospace; /* Troca a fonte padão de toldo o texto */
+}
+
+/* Cabeçalho em estilo */
+header {
+  background: #0e0b0bea;
+  color: #ffffff;
+  padding: 0px 0;
+  top: 0px;
+  text-align: center;
+  width: 100vw;
+  position: fixed;
+  margin-left: -20px;
+}
+ 
+header h1 {
+  text-shadow: #fff7f783 1px 2px 8px;
+  color: #ffffffc2;
+  padding: 0px;
+  margin: 0px;
+  top: 10px;
+  margin-left: 140px;
+  font-size: 2.5em;
+  position: relative;
+  text-align: left;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 200px; /
+  
+}
+nav ul li {
+  display: flex;
+  margin-left: 0; 
+  float: none; 
+}
+nav ul li a {
+  color: #f3f3f3f8;
+  text-decoration: none;
+  text-shadow: #ffffffde 1px 0px 1px;
+  position: relative;
+  top: -25px;
+  transition: color 0.8s ease;  /* transição para o hover */
+}
+
+nav ul li a:hover {
+  color: #f1de2e;
+}
+
+
+/* Seções principais para manipular cada bloco de texto */
+main section {
+  justify-content: center;
+  top: 0px;
+
+  margin: 0;
+  padding: 40px;
+  width: 100%;
+  background: #ffffff;
+ 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main section h2 {
+  font-size: 10vh;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.multicolor-text {     /* Rgbd do Span html */
+  background: linear-gradient(
+    90deg,
+    rgb(241, 222, 46),
+    rgb(148, 23, 23),
+    rgb(52, 152, 219),
+    rgb(46, 204, 113),
+    rgb(155, 89, 182)
+  );
+  -webkit-background-clip: text;   /* Aplica gradiente em navegadores Webkit */
+  -webkit-text-fill-color: transparent; /* Torna texto dentro desses navegadores transparente */
+  background-clip: text;  /* aplica o gradiente apenas nos navegadores compativeis */
+  color: transparent;  /* deixa texto padrao transparente e mostra apenas rgb color */
+  font-weight: bold; /* Peso da fonte ( quanto mais escura ela vai ficar )*/
+ 
+}
+
+ /* Cria um container flex para manipular a estrutura dos posters */
+.planos-container {
+  display: flex;
+  gap: 320px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 234px;
+  margin-bottom: 234px;
+}
+ /* Estilizando os Posters */
+.plano-card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px rgb(0, 0, 0);
+  color: #fff;
+  width: 300px;
+  min-height: 340px;
+  padding: 24px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: brightness(0.7);
+}
+
+.plano-card h4 {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-shadow: 1px 1px 8px rgba(3, 2, 2, 0.667);
+  display: flex;
+  justify-content: center;
+}
+
+.plano-card .postA a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: 0.8s ease;
+}
+
+.plano-card .postB a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: 0.5s ease;
+ 
+} 
+.plano-card .postC a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: 0.5s ease;
+ 
+}  
+.plano-card a:hover {
+  color: #09ec14;
+}
+
+
+main ul {
+  color: #941717;
+  padding: 1vh 10px;
+  margin: 5px;
+  left: 50%;
+}
+
+main section li {
+  font-size: xx-large;
+}
+
+main section p {
+  font-size: xx-large;
+}
+
+main section label {
+  font-size: xx-large;
+}
+h3 {
+  text-align: center;
+
+}
+
+.servicos ul{
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 32px;
+color: #941717;
+padding: 0;
+margin: 0;
+}
+
+.servicos a {
+  color: inherit; /* Herda a cor do elemento pai */
+  text-decoration: none; /* Opcional: remove o sublinhado */
+  transition: 0.7s ease;
+}
+
+.servicos a:hover {
+ color: #3d2e2e;
+}
+
+
+/* Tabelas Estilos */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background: #333;
+  color: #fff;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 10px 0 5px;
+}
+
+form input,
+form button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+
+}
+
+form button {
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: xx-large;
+}
+
+form button:hover {
+  background: #555;
+}
+
+/* Rodapé  final page*/
+footer {
+  position: relative;
+  text-align: center;
+  padding: 10px 0;
+  width: 100vw;
+  left: 0;
+  margin: 0;
+  margin-left: -20px;
+  background: #333333cb;
+  color: #fdfdfd;
+}
