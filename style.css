@@ -26,15 +26,29 @@ header {
   width: 100vw;
   position: fixed;
 }
-header p {
+header h1 {
+  position: absolute;
+  top: 0px; /* ajuste como quiser */
+  left: 4000px; /* ajuste como quiser */
   text-shadow: #fff7f783 1px 2px 8px;
   color: #f5f4f4d2;
   padding: 0px;
   margin: 10px;
   top: 0px;
   font-size: 0.6em;
-  position: relative;
   left: 60vh;
+  transition: color 0.8s, text-shadow 0.8s, transform 0.8s;
+}
+
+header h1:hover {
+  color: #fff490;
+  text-shadow: 0 0 16px #f1de2e, 0 0 32px #fff;
+  transform: scale(1.2) rotateX(40deg) translateY(1px);
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+nav {
+  position: relative;
 }
 
 nav ul {
@@ -230,7 +244,6 @@ footer {
   width: 100vw;
   left: 0;
   margin: 0;
-  margin-left: -20px;
   background: #333333cb;
   color: #fdfdfd;
 }

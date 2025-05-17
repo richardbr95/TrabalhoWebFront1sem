@@ -26,15 +26,29 @@ header {
   width: 100vw;
   position: fixed;
 }
-header p {
+header h1 {
+  position: absolute;
+  top: 0px; /* ajuste como quiser */
+  left: 4000px; /* ajuste como quiser */
   text-shadow: #fff7f783 1px 2px 8px;
   color: #f5f4f4d2;
   padding: 0px;
   margin: 10px;
   top: 0px;
   font-size: 0.6em;
-  position: relative;
   left: 60vh;
+  transition: color 0.8s, text-shadow 0.8s, transform 0.8s;
+}
+
+header h1:hover {
+  color: #fff490;
+  text-shadow: 0 0 16px #f1de2e, 0 0 32px #fff;
+  transform: scale(1.2) rotateX(40deg) translateY(1px);
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+nav {
+  position: relative;
 }
 
 nav ul {
@@ -105,67 +119,6 @@ main section h2 {
   font-weight: bold; /* Peso da fonte ( quanto mais escura ela vai ficar )*/
 }
 
-/* Cria um container flex para manipular a estrutura dos posters */
-.planos-cards {
-  display: flex;
-  flex-wrap: 1 1 260px;
-  gap: 100px;
-  justify-content: center;
-  margin: 40px 0;
-}
-/* Estilizando os Posters */
-.plano-card {
-  background-size: cover;
-  background-position: center;
-  width: 260px;
-  min-height: 340px;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 24px 20px 20px 20px;
-  position: relative;
-  overflow: hidden;
-  color: #fff;
-  transition: transform 0.4s;
-}
-
-.plano-card h4 {
-  margin: 0 0 8px 0;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-shadow: 1px 1px 8px #000a;
-}
-
-.plano-card a {
-  color: #fff;
-  background-color: #17709448;
-  padding: 8px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1em;
-  align-self: flex-end;
-  transition: background 0.8s, color 0.3s;
-}
-
-.plano-card a:hover {
-  background: #f1de2e;
-  color: #3d2e2e;
-}
-
-.plano-card:hover {
-  transform: translateY(-8px) scale(1.04);
-}
-
-main ul {
-  color: #941717;
-  padding: 1vh 10px;
-  margin: 5px;
-  left: 50%;
-}
-
 main section li {
   font-size: xx-large;
 }
@@ -181,45 +134,86 @@ h3 {
   text-align: center;
 }
 
-.servicos-cards {
+.form-horizontal {
   display: flex;
-  gap: 100px;
-  justify-content: center;
-  margin: 32px 0;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.servico-card {
-  background-size: cover; /* Faz a imagem de fundo cobrir todo o card */
-  background-position: center; /* Centraliza a imagem de fundo */
-  width: 240px; /* Largura fixa do card */
-  height: 160px; /* Altura fixa do card */
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  display: flex; /* Usa Flexbox para alinhar o conteúdo */
-  align-items: flex-end; /* Alinha o conteúdo (link) na parte inferior do card */
-  justify-content: center;
-  padding: 16px;
-  transition: transform 0.6s;
+.form-row {
+  display: flex;
+  gap: 18px;
 }
 
-.servico-card a {
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 8px 16px;
-  border-radius: 8px;
-  text-decoration: none;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  color: #000000;
+  font-size: 2em;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 8px 10px;
+  border: 1.5px solid #ececec;
+  border-radius: 7px;
+  background: #fafafa;
+  font-size: 1em;
+  color: #222;
+  margin-bottom: 0;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 38px;
+}
+
+.form-group button {
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #ffe066 20%, #f1de2e 100%);
+  color: #222;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.2em;
   font-weight: bold;
-  font-size: 1.1em;
-  transition: background 0.8s;
+  cursor: pointer;
+  margin-top: 18px;
+  transition: transform 0.2s;
 }
 
-.servico-card:hover {
-  transform: translateY(-8px) scale(1.04);
+.form-group button:hover {
+  transform: translateY(-2px) scale(1.02);
 }
 
-.servico-card a:hover {
-  background: #f1de2e;
-  color: #3d2e2e;
+/* Responsivo: empilha no mobile */
+@media (max-width: 700px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+.sent-animation {
+  animation: pulse 0.7s;
+  background: #91e676 !important;
+  color: #222 !important;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Rodapé  final page*/
@@ -230,7 +224,6 @@ footer {
   width: 100vw;
   left: 0;
   margin: 0;
-  margin-left: -20px;
   background: #333333cb;
   color: #fdfdfd;
 }
